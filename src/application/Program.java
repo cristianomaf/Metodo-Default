@@ -3,6 +3,7 @@ package application;
 import java.util.Scanner;
 
 import services.BrasilTaxaJuros;
+import services.InterfaceTaxaJuros;
 
 public class Program {
 
@@ -16,7 +17,7 @@ public class Program {
 		System.out.print("Entre com a quantidade de meses a parcelar:");
 		int meses = scan.nextInt();
 		
-		BrasilTaxaJuros txb = new BrasilTaxaJuros(taxaJuros);
+		InterfaceTaxaJuros txb = new BrasilTaxaJuros(taxaJuros);
 		System.out.printf("O valor a pagar de um emprestimo de %.2f em %d vezes = %.2f ",valor,meses,txb.pagamento(valor, meses));
 		
 		
